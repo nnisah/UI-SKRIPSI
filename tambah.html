@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Admin | Siswa</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="./plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="./plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="./dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <style>
+    i.fas.fa-info-circle {
+        color: darkorange;
+        font-size: 25px;
+    }
+    i.fas.fa-trash {
+        color: darkorange;
+        font-size: 20px;
+    }
+    i.fas.fa-info-circle:hover {
+        color: blue;
+    }
+    i.fas.fas.fa-trash:hover {
+        color: red;
+    }
+    i.fas.fa-arrow-alt-circle-left{
+      color: darkblue;
+      font-size: 25px;
+    }
+    i.fas.fa-arrow-alt-circle-left:hover{
+      color: #d48f17;
+    }
+    i.fas.fa-bookmark{
+      color :darkblue;
+      font-size: 25px;
+    }
+    i.fas.fa-bookmark:hover{
+      color: green;
+    }
+    i.fas.fa-sync-alt{
+      color :darkblue;
+      font-size: 25px;
+    }
+    i.fas.fa-sync-alt:hover{
+      color: blue;
+      
+    form{
+        padding: 0%;
+    }
+  </style>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="./dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="./dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="./dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <!-- <a href="../../index3.html" class="brand-link">
+      <img src="./dist/img/AdminLTELogo.png"
+           alt="AdminLTE Logo"
+           class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a> -->
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="brand-image">
+          <img src="./dist/img/user2-160x160.jpg" class="img-circle elevation-3" alt="User Image">
+        </div>
+      </div>
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="info">
+          <a href="#" class="d-block">SMA Negeri 1 Bengkulu Selatan</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview">
+            <a href="index.html" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview menu-open">
+            <a href="./siswa.html" class="nav-link active">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Siswa
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="./status.html" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Cek Status Siswa
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6 flex-column">
+            <h1>Data Detail Siswa </h1>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <!-- <a href="tambah.html" class="btn btn-success" style="margin-bottom: 1%;">Kembali</a> -->
+
+            <div class="card">
+              <!-- <div class="card-header">
+                <h3 class="card-title">DataTable with default features</h3>
+              </div> -->
+              <!-- /.card-header -->
+              <div class="card-body" >
+                  <form>
+                    <a href="./siswa.html" class="btn mr-2" style="margin-bottom: 1%; padding: 0%;" data-toggle="tooltip" data-placement="top" title="kembali">
+                      <i class="fas fa-arrow-alt-circle-left"></i>
+                      <!-- <i class="fas fa-save"></i> -->
+                    </a>
+                    <a href="./siswa.html" class="btn mr-2" style="margin-bottom: 1%; padding: 0%;" data-toggle="tooltip" data-placement="top" title="Simpan data">
+                      <i class="fas fa-bookmark"></i>
+                    </a>
+                    <a href="./siswa.html" class="btn" style="margin-bottom: 1%; padding: 0%;" data-toggle="tooltip" data-placement="top" title="Ulang">
+                      <i class="fas fa-sync-alt"></i>
+                    </a>
+                    <div class="row">
+                      <div class="col">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="form-group">
+                              <label for="InputNisn">NISN</label>
+                              <input type="text" class="form-control" id="InputNisn" aria-describedby="emailHelp" placeholder="nisn siswa" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="InputNisn">Nama Lengkap</label>
+                              <input type="text" class="form-control" id="InputNisn" aria-describedby="emailHelp">                              
+                            </div>
+                            <div class="form-group">
+                              <label for="InputNisn">Jenis Kelamin</label>                              
+                              <select id="inputJK" class="form-control">
+                                <option selected>Perempuan</option>
+                                <option>Laki Laki</option>
+                              </select>
+                            </div>
+                            <div class="form-row">
+                              <div class="form-group col-md-6">
+                                <label for="inputTempat">Tempat Lahir</label>
+                                <input type="text" class="form-control" id="inputTempat">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="inputTanggal">Tanggal Lahir</label>
+                                <input type="date" class="form-control" id="inputTanggal">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="inputAgama">Agama</label>
+                              <select id="inputAgama" class="form-control">
+                                <option selected>Islam</option>
+                                <option>Protestan</option>
+                                <option>Katolik</option>
+                                <option>Hindu</option>
+                                <option>Budha</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="inputAlamat">Alamat</label>
+                              <input type="text" class="form-control" id="inputAlamat">                              
+                            </div>
+                            <div class="form-group">
+                              <label for="inputKewarganegaraan">Kewarganegaraan</label>
+                              <input type="text" class="form-control" id="inputKewarganegaraan" placeholder="Cth. Indonesia">                             
+                            </div>
+                            <div class="form-group">
+                              <label for="inputKewarganegaraan">Email/No Hp</label>
+                              <input type="text" class="form-control" id="inputKewarganegaraan" placeholder="Cth. anisah@gmail.com">
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col" >
+                        <div class="card">
+                          <div class="card-body">                              
+                                <div class="form-group">
+                                  <label for="inputAgama">Nilai Rapor Ipa</label>
+                                  <select id="inputAgama" class="form-control">
+                                    <option>--Pilih--</option>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                    <option>E</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputAgama">Nilai Rapor Ips</label>
+                                  <select id="inputAgama" class="form-control">
+                                    <option>--Pilih--</option>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                    <option>E</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputAgama">USBN Ipa</label>
+                                  <select id="inputAgama" class="form-control">
+                                    <option>--Pilih--</option>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                    <option>E</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputAgama">USBN Ips</label>
+                                  <select id="inputAgama" class="form-control">
+                                    <option selected>--Pilih--</option>
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                    <option>E</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputAgama">Rekomendasi</label>
+                                  <select id="inputAgama" class="form-control">
+                                    <option selected>--Pilih--</option>
+                                    <option>IPA</option>
+                                    <option>IPS</option>
+                                    <option>Tidak Rekomendasi</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputAgama">Peminatan & Wawancara</label>
+                                  <select id="inputAgama" class="form-control">
+                                    <option selected>--Pilih--</option>
+                                    <option>IPA</option>
+                                    <option>IPS</option>                                    
+                                  </select>
+                                </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                  </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- <div class="container">
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col ml-4 left">
+                  <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="col mr-4 right">
+                  <input type="text" class="form-control" placeholder="Last name">
+                </div>
+              </div>
+            </form>
+        </div> -->
+      </div>
+     
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.0.5
+    </div>
+    <strong>Copyright <a href="">2020 Nnisah</a>.</strong>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="./plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="./plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="./plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="./plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="./plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="./plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="./dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="./dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+</body>
+</html>
